@@ -14,9 +14,9 @@ def print_client_request():
             client_list.remove(client)
         elif client.timestamp_request is not None:
             # print(client)
-            print('|{}\t|{}\t|{}\t|{:<14}\t|'.format(client.delta_tmstp(),
+            print('|{}\t|{}\t|{}\t|{}\t|'.format(client.delta_tmstp(),
                                                      client.ip,
-                                                     client.name,
+                                                     client.name.ljust(14)[:14],
                                                      client.msg.ljust(14)[:14]))
     print('|_______________|_______________|_______________|_______________|')
 
