@@ -4,11 +4,21 @@ import threading
 
 
 def print_client_request():
+    print('|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|')
+    print('|   Timestamp\t|   IP address\t|   Group name\t|   Message\t|')
+    print('|_______________|_______________|_______________|_______________|')
+    print('|               |               |               |               |')
+
     for client in client_list:
         if client.clientsocket is None:
             client_list.remove(client)
         elif client.timestamp_request is not None:
-            print(client)
+            # print(client)
+            print('|{}\t|{}\t|{}\t|{:<14}\t|'.format(client.delta_tmstp(),
+                                                     client.ip,
+                                                     client.name,
+                                                     client.msg.ljust(14)[:14]))
+    print('|_______________|_______________|_______________|_______________|')
 
 
 class client_thread(threading.Thread):

@@ -42,24 +42,24 @@ class client(object):
 print('Launching client script')
 
 # hote = "localhost"
-hote = "192.168.1.17"
-port = 5000
+# hote = "192.168.1.17"
+# port = 5000
 # name = 'Vincent'
 
-# while True:
-#     hote = input("Entrez l'adresse IP du serveur (XXX.XXX.XXX.XXX): ")
-#     if re.search('^([0-9]{1,3}[.]){3}([0-9]{1,3}){1}$', hote) is None:
-#         print("Mauvais format d'IP")
-#         continue
-#     break
+while True:
+    hote = input("Entrez l'adresse IP du serveur (XXX.XXX.XXX.XXX): ")
+    if re.search('^([0-9]{1,3}[.]){3}([0-9]{1,3}){1}$', hote) is None:
+        print("Mauvais format d'IP")
+        continue
+    break
 
-# while True:
-#     port = input('Entrez le port de connexion du serveur: ')
-#     if re.search('^[0-9]{1,5}$', port) is None:
-#         print('Mauvais format de port')
-#         continue
-#     port = int(port)
-#     break
+while True:
+    port = input('Entrez le port de connexion du serveur: ')
+    if re.search('^[0-9]{1,5}$', port) is None:
+        print('Mauvais format de port')
+        continue
+    port = int(port)
+    break
 
 while True:
     name = input('Entrez un nom de groupe (single word 15 letters max without whitespace and number): ')
