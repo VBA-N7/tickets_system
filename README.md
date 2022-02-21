@@ -1,5 +1,7 @@
 # Queue ticket system
 
+[![image](https://img.shields.io/badge/python-v.3-blue)](https://python.org)
+
 Those scripts allow you to simulate a queue system that can be used in a class. 
 I was bored to raise my hand in class and waiting for the teacher to come and help me. 
 
